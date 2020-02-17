@@ -1,12 +1,13 @@
 
 node {
    stage('SCM Checkout'){
-        def mvn = tool (name: 'maven', type: 'maven') + '/bin/mvn'
+       
 	url: 'https://github.com/prasadkarri1988/jenkins-cicd'
    }
    
     stage('Mvn Package'){
 	   // Build using maven
+	   def mvn = tool (name: 'maven3', type: 'maven') + '/bin/mvn'
 	   sh "${mvn} clean package"
    }
    
