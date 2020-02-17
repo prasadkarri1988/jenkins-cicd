@@ -1,8 +1,7 @@
 
 node {
-   stage('SCM Checkout'){
-       
-	url: 'https://github.com/prasadkarri1988/jenkins-cicd'
+   stage('SCM Checkout'){  
+	url: 'https://github.com/javahometech/my-app'
    }
    
     stage('Mvn Package'){
